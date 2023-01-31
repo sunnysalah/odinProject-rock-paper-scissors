@@ -8,10 +8,17 @@
 </head>
 <body>
 
+    <button class="btn" id="rock">Rock</button>
+    <button class="btn" id="paper">Paper</button>
+    <button class="btn" id="scissors">Scissors</button>
+
 
     <script>
         
         const computersChoices = ['ROCK', 'PAPER', 'SCISSORS'];
+        const userChoosesRock = document.querySelector('#rock');
+        const userChoosesPaper = document.querySelector('#paper');
+        const userChoosesScissors = document.querySelector('#scissors');
 
         playGame();
         
@@ -56,7 +63,7 @@
         function playGame(){
             let userScore = 0;
             let computerScore = 0;
-            for(i=0; i<5; i++){ 
+            // for(i=0; i<5; i++){ 
                 computerChoice = getComputerChoice();
                 userInput = prompt("Rock, paper, scissors");
                 let userChoice = userInput.toUpperCase();
@@ -66,7 +73,7 @@
                 }else{
                     computerScore++;
                 }
-            }
+            // }
             userScore > computerScore 
             ? console.log("Congradulations, you won. Now get off the computer, nerd!")
             : console.log("Computer wins, try again next time");
